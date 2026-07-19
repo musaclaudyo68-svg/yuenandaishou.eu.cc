@@ -1,0 +1,376 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Microsoft YaHei", Arial;
+    color: #182333;
+    line-height: 1.8;
+}
+
+
+.container {
+    width: 1200px;
+    max-width: 90%;
+    margin: auto;
+}
+
+
+
+.header {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 999;
+    box-shadow: 0 5px 20px #0001;
+}
+
+
+.nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.logo {
+    font-size: 32px;
+    font-weight: 800;
+    color: #092044;
+}
+
+
+
+    .logo span {
+        color: #00b86b;
+    }
+
+
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+
+.menu-btn {
+    display: none;
+    font-size: 30px;
+}
+
+
+
+
+
+/* hero */
+
+
+.contact-hero {
+    height: 700px;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    color: white;
+    overflow: hidden;
+    position: relative;
+    background: url("../picture/contact-banner.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.hero-text {
+    max-width: 700px;
+}
+
+
+    .hero-text h1 {
+        font-size: 55px;
+        margin-bottom: 25px;
+    }
+
+
+    .hero-text p {
+        font-size: 20px;
+        opacity: .9;
+    }
+
+
+
+.primary-btn {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 15px 45px;
+    background: #00c779;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+}
+
+
+
+
+
+
+section {
+    padding: 90px 0;
+}
+
+
+
+h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+
+.subtitle {
+    text-align: center;
+    color: #777;
+}
+
+
+
+
+
+.business-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+}
+
+
+
+.business-card {
+    padding: 35px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px #0001;
+}
+
+
+
+.icon {
+    font-size: 35px;
+    color: #006cff;
+    font-weight: bold;
+}
+
+
+
+.business-card h3 {
+    margin: 15px 0;
+}
+
+
+
+
+
+/* process */
+
+
+.process {
+    background: #f5f8ff;
+}
+
+
+.process-box {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+
+
+    .process-box div {
+        text-align: center;
+    }
+
+
+
+    .process-box span {
+        display: inline-flex;
+        width: 70px;
+        height: 70px;
+        background: #006cff;
+        color: white;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        font-size: 22px;
+    }
+
+
+
+
+
+/* form */
+
+
+.form-section {
+    background: #061a35;
+    color: white;
+}
+
+
+
+.form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+    form a {
+        display: inline-block;
+        width: 200px;
+        height: 50px;
+        line-height: 50px; /* 让文字垂直居中 */
+        background: #00c779;
+        border-radius: 50px;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        margin-top: 35px;
+    }
+
+input,
+select,
+textarea {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+}
+
+
+
+textarea {
+    height: 120px;
+}
+
+
+
+
+
+
+/* faq */
+
+
+.faq-item {
+    margin: 25px auto;
+    max-width: 850px;
+    padding: 25px;
+    background: #f6f9ff;
+    border-radius: 15px;
+}
+
+
+
+
+footer {
+    background: #06152d;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+
+
+
+
+
+@media(max-width:900px) {
+
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+
+        nav.show {
+            display: flex;
+        }
+
+
+    .menu-btn {
+        display: block;
+    }
+
+
+
+    .contact-hero h1 {
+        font-size: 35px;
+    }
+
+
+    .business-grid,
+    .process-box,
+    .form-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+nav a {
+    position: relative;
+    color: #333;
+    font-size: 16px;
+    transition: .3s;
+}
+
+
+    /* 当前页面 */
+
+    nav a.active {
+        color: #006cff;
+        font-weight: 600;
+    }
+
+
+
+        /* 下方蓝色线 */
+
+        nav a.active::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            width: 30px;
+            height: 3px;
+            background: #006cff;
+            border-radius: 10px;
+            transform: translateX(-50%);
+        }
+
+
+
+
+    nav a:hover {
+        color: #006cff;
+    }
